@@ -1,0 +1,495 @@
+.light-theme{
+    /*=============== light theme colors  ===============*/
+  
+    --background-primary: hsl(0, 0%, 100%);
+    --background-secondary: hsl(210, 100%, 98%);
+  
+    --action-primary: hsl(213, 49%, 89%);
+    --action-secondary: hsl(210, 56%, 94%);
+  
+    --foreground-primary: hsl(218, 24%, 18%);
+    --foreground-secondary: hsl(216, 12%, 47%);
+    --foreground-tertiary: hsl(214, 22%, 70%);
+  
+    --accent: #6960fc;
+  }
+  
+  .dark-theme {
+    /*=============== dark theme colors  ===============*/
+    --background-primary: hsl(218, 23%, 23%);
+    --background-secondary: hsl(220, 26%, 14%);
+  
+    --action-primary: hsl(216, 15%, 52%);
+    --action-secondary: hsl(218, 23%, 23%);
+  
+    --foreground-primary: hsl(210, 38%, 95%);
+    --foreground-secondary: hsl(211, 25%, 84%);
+    --foreground-tertiary: hsl(214, 20%, 69%);
+  
+    --accent: hsl(229, 94%, 62%);
+  }
+
+
+button {
+ all:  unset;
+ cursor: pointer;
+}
+
+  .primary-btn {
+    padding: 0.6rem 1.5rem;
+    background: var(--primary-color);
+    color: #fff;
+    letter-spacing: 0.5px;
+    border-radius: 100px;
+    transition: background 0.2s ease-in-out;
+  }
+  .primary-btn:hover {
+    background: var(--title-color);
+  }
+  .secondery-btn {
+    position: relative;
+    letter-spacing: 0.5px;
+    background: transparent;
+    font-weight: 700;
+    font-size: 1.1rem;
+  }
+  .secondery-btn::before {
+    position: absolute;
+    content: "";
+    width: 20%;
+    height: 3px;
+    background-color: var(--primary-color);
+    left: 0;
+    bottom: 0;
+    transition: width 0.2s ease-in-out;
+  }
+  .secondery-btn:hover::before {
+    width: 100%;
+  }
+
+  :root {
+    /*========== Colors ==========*/
+    --white: hsl(0, 0%, 100%);
+  
+    /*========== Font and typography ==========*/
+    --fs-base: 0.85rem;
+    --fs-1: 1.875rem;
+    --fs-2: 1.5rem;
+    --fs-3: 1.25rem;
+    --fs-4: 0.875rem;
+    --fs-5: 0.75rem;
+  
+    /*========== spacing ==========*/
+    --py: 5rem;
+  }
+
+  body{
+    background-color: var(--background-primary);
+  }
+  
+
+.top{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    height: 50px;
+    font-weight: 700;
+    font-size: 20px;
+    font-family: sans-serif;
+    padding-top: 30px;
+}
+
+.top a{
+    all: unset;
+    cursor: pointer;
+}
+
+.logo a{
+    color: var(--foreground-primary);
+}
+
+.logo span{
+    color: var(--accent);
+    font-weight: bolder;
+}
+
+.menu-btn{
+    width: 100px;
+    text-align: right;
+}
+
+.menu-btn span{
+  cursor: pointer;
+  background-color: var(--background-secondary);
+  border-radius: 50%;
+  padding: 5px;
+  color: var(--foreground-secondary);
+  font-size: 30px;
+  font-weight: 500;
+  transition: all 0.3s ease-in-out;
+}
+
+.menu-btn span:hover{
+    background-color: var(--accent);
+    color: white;
+}
+
+.menu-btn .theme{
+    background-color: var(--background-primary);
+    color: var(--foreground-primary);
+}
+
+.menu-btn .theme:hover{
+    background-color: var(--background-primary);
+    color: var(--foreground-primary);
+}
+
+.menu-dad{
+  display: flex;
+  flex-direction: row;
+ width: 100%;
+ height: 100vh;
+  translate: -100%;
+  position: fixed;
+  top: 0;
+  transition: all 0.2s ease-in;
+}
+
+.menu{
+    width: 60%;
+    height: 100vh;
+    background-color: white;
+    position: fixed;
+    top: 0;
+    left: 0;
+    
+    z-index: 999;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+}
+
+.right-menu{
+   width: 40%;
+   height: 100vh;
+   background-color: rgb(174, 165, 165);
+   position: fixed;
+    top: 0;
+    right: 0;
+}
+
+.show{
+    translate: 0;
+}
+
+
+hr{
+    font-size: 1px;
+    font-weight: 100;
+}
+
+.menu-con{
+    padding: 0px;
+}
+
+
+.menu-con p{
+    padding: 20px 15px;
+    font-size: 20px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s ease-in;
+}
+
+.menu-con p:hover{
+    color: white;
+    background-color: var(--accent);
+}
+
+.menu-btn .des-menu{
+    display: none;
+}
+
+.dev .con h4{
+  color: var(--accent);
+  margin: 10px 0;
+  font-size: 30px;
+}
+
+.dev .con h2{
+  margin: 10px 0;
+  font-size: var(--fs-1);
+}
+
+.dev .con p{
+  margin: 20px 0;
+  font-weight: 600;
+  color: var(--foreground-secondary);
+}
+
+.dev .con a{
+  font-size: var(--fs-3);
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.dev .con hr{
+  margin: 5px 0;
+  width: 50px;
+  height: 5px;
+  border-radius: 2px;
+  color: var(--accent);
+  background-color: var(--accent);
+  transition: all 0.2s ease-in;
+}
+
+.hr:hover hr{
+  width: 135px;
+}
+
+.pop-animation {
+  animation: pop 3s linear infinite;
+}
+
+@keyframes pop {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.up-btn a{
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  width: 50px;
+  height: 50px;
+  border-radius: 15px;
+  background-color: #6960fc;
+  border: none;
+  color: white;
+  transition: all 0.2s ease-in;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 25px;
+  z-index: 9999;
+  transform: translateY(150%);
+}
+
+#gotoup.active{
+  transform: translateY(0);
+  position: fixed;
+  bottom: 70;
+  right: -10;
+}
+
+.up-btn a:hover{
+  bottom: 35px;
+}
+
+.service{
+  width: 100%;
+  margin-top: 100px;
+}
+
+.service .right{
+  width: 70%;
+  height: auto;
+  padding: 20px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.service.right img{
+  width: 100%;
+  height: auto;
+}
+
+.service .left{
+  width: 70%;
+  height: auto;
+  padding: 20px;
+  margin: 0 auto;
+
+}
+
+.service .left h3{
+     color: #6960fc;
+     font-size: 25px;
+     margin: 15px 0;
+}
+
+.service .left h1{
+    margin: 15px 0;
+    letter-spacing: 2px;
+}
+
+.service .left span{
+  background-color: #6960fc;
+  color: white;
+  padding: 15px;
+  border-radius: 50%;
+  margin: 20px 0;
+  transition: all 0.3s ease-in;
+}
+
+.service .left div:hover span{
+  margin-left: 40px;
+}
+
+.service .left div{
+  margin: 15px 0;
+}
+
+.service .left h4{
+  margin: 10px 0;
+  font-size: 20px;
+}
+
+.service .left p{
+  margin-top: 20px;
+  color: var(--foreground-secondary);
+}
+
+.product h3{
+  text-align: center;
+  color: var(--accent);
+  margin: 10px 0;
+}
+
+.product h2{
+  text-align: center;
+  margin: 20px 0;
+}
+
+.product .row{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.card{
+  padding: 10px;
+  margin: 20px;
+  width: 70%;
+  height: 300px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  text-align: center;
+  border-radius: 10px;
+  max-width: 400px;
+}
+
+.card h3{
+  margin-bottom: 20px;
+  color: black;
+  font-size: 20px;
+  letter-spacing: 2px;
+}
+
+.card img{
+  margin: 20px 0;
+}
+
+.card p{
+  margin: 15px 0;
+}
+
+.hrr{
+  width: 100px;
+  margin: 0 auto;
+}
+
+.card hr{
+  margin: 5px 0;
+  width: 50px;
+  height: 5px;
+  border-radius: 2px;
+  color: var(--accent);
+  background-color: var(--accent);
+  transition: all 0.2s ease-in;
+}
+
+.card .hrr:hover hr{
+  width: 105px;
+}
+
+.container-latest{
+  width: 500px;
+  height: 300px;
+  margin: 100px auto;
+  display: flex;
+  flex-direction: row;
+  overflow: hidden;
+}
+
+.container-latest .item{
+flex: 1 0 100%;
+height: 240px;
+}
+
+.latest-content p{
+  display: none;
+}
+
+.container-latest .item p{
+  padding: 15px 8px;
+  font-size: 22px;
+  font-weight: 700;
+  color: var(--foreground-secondary);
+}
+
+.container-latest .item img{
+  width: 100%;
+  height: 100%;
+}
+
+.btn-latest{
+  width: 200px;
+  height: 100px;
+  margin: 20px auto;
+  display: flex;
+  justify-content: space-between;
+}
+
+.btn-latest span{
+  width: 50px;
+  height: 50px;
+  cursor: pointer;
+  background-color: lightblue;
+  color: white;
+  padding: 12px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 600;
+  transition: all 0.2s ease-in;
+}
+
+.btn-latest span:hover{
+  color: lightblue;
+  background-color: white;
+}
+
+.latest{
+  background-color: var(--background-secondary);
+}
+
+.latest-content{
+  padding-top: 40px;
+}
+.latest-content h2{
+   color: #6960fc;
+   text-align: center;
+}
+.latest-content h1{
+  text-align: center;
+}
